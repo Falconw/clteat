@@ -169,12 +169,10 @@ strong { font-weight: 700; }
 /* Wordmark: Sora letters + engineered "E" (3 bars, middle teal) */
 /* Official wordmark — rendered from the brand-kit vector (#ts-wm light,
    #ts-wmr reversed). Never a font substitute; never redrawn. */
-.ts-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .brand { display: inline-flex; align-items: center; line-height: 0; }
-/* viewBox is 1502×214 (≈7:1). Set width explicitly from the ratio so the
-   inline SVG never collapses to 0 width inside the flex container. */
-.wordmark__svg { display: block; height: 1.5rem; width: 10.5rem; aspect-ratio: 1502 / 214; flex: 0 0 auto; }
-.brand--lg .wordmark__svg { height: 2rem; width: 14rem; }
+/* Wordmark as <img> — always renders, sizes reliably (height-driven). */
+.wordmark__img { display: block; height: 1.5rem; width: auto; }
+.brand--lg .wordmark__img { height: 2rem; }
 /* Nav shows the reversed (silk) mark over the dark hero, and swaps to the
    navy mark once scrolled / when the mobile menu is open. */
 .wm--light { display: none; }
