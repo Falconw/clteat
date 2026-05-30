@@ -31,6 +31,17 @@
       window.addEventListener("keydown", (e) => e.key === "Escape" && closeMenu());
       const mq = window.matchMedia("(min-width: 901px)");
       mq.addEventListener("change", (e) => e.matches && closeMenu());
+
+      /* Swipe up to close — active only while the mobile menu is open */
+      let swipeY = null;
+      nav.addEventListener("touchstart", (e) => {
+        swipeY = nav.classList.contains("is-open") ? e.touches[0].clientY : null;
+      }, { passive: true });
+      nav.addEventListener("touchmove", (e) => {
+        if (swipeY === null) return;
+        if (swipeY - e.touches[0].clientY > 50) { closeMenu(); swipeY = null; }
+      }, { passive: true });
+      nav.addEventListener("touchend", () => { swipeY = null; }, { passive: true });
     }
   }
 

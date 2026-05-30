@@ -76,7 +76,7 @@
 /* 2. RESET & BASE ------------------------------------------ */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: clip; }
 html:focus-within { scroll-padding-top: 6rem; }
 body {
   font-family: var(--font-body);
@@ -86,7 +86,8 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
 }
 img, svg, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -202,7 +203,7 @@ strong { font-weight: 700; }
     linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
 }
 /* Soft teal aura */
-.aura { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .4; pointer-events: none; z-index: 0; }
+.aura { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .4; pointer-events: none; z-index: 0; max-width: 100%; }
 .aura--teal { background: radial-gradient(circle, #00c2a8 0%, transparent 70%); }
 
 /* 6. COMPONENTS -------------------------------------------- */
@@ -622,3 +623,12 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
 [dir="rtl"] .service-card:hover::after { border-top: 26px solid var(--teal); border-left: 0; border-right: 26px solid transparent; }
 /* checkmarks / arrows in feature lists keep direction via flex auto-flip */
 [dir="rtl"] .breadcrumb { direction: rtl; }
+
+/* RTL overflow hardening — flex/grid rows must never push scroll width */
+[dir="rtl"] .deliverables,
+[dir="rtl"] .engagement__services,
+[dir="rtl"] .logostrip,
+[dir="rtl"] .btn-row,
+[dir="rtl"] .hero__trust,
+[dir="rtl"] .form-grid { max-width: 100%; }
+[dir="rtl"] .aura { left: auto; }
