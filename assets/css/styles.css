@@ -584,8 +584,6 @@ strong { font-weight: 700; }
 .nav.on-dark:not(.is-scrolled) .lang-toggle:hover { border-color: var(--cloud); }
 .nav.on-dark.is-open .lang-toggle { color: var(--navy); border-color: var(--line-strong); }
 
-/* Prevent flash before Arabic is applied */
-html.i18n-busy body { visibility: hidden; }
 
 /* Arabic typography — Sora/Manrope/JetBrains lack Arabic glyphs */
 [lang="ar"] body { font-family: "IBM Plex Sans Arabic", "Manrope", system-ui, sans-serif; }
