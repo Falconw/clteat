@@ -167,36 +167,19 @@ strong { font-weight: 700; }
 
 /* 5. BRAND ASSETS ------------------------------------------ */
 /* Wordmark: Sora letters + engineered "E" (3 bars, middle teal) */
-.wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  font-size: 1.32rem;
-  line-height: 1;
-  color: var(--navy);
-  user-select: none;
-}
-.wordmark__e {
-  display: inline-block;
-  width: 0.6em; height: 0.72em;
-  margin: 0 0.14em;
-  position: relative;
-  top: 0;
-  flex: 0 0 auto;
-  align-self: baseline;
-}
-.wordmark__e i {
-  position: absolute; left: 0; right: 0; height: 19%;
-  background: currentColor; border-radius: 1px;
-}
-.wordmark__e i:nth-child(1) { top: 0; }
-.wordmark__e i:nth-child(2) { top: 40.5%; right: 16%; background: var(--teal); }
-.wordmark__e i:nth-child(3) { bottom: 0; }
-.wordmark--light { color: var(--cloud); }
-.wordmark--sm { font-size: 1.15rem; }
-.wordmark--lg { font-size: 1.7rem; }
+/* Official wordmark — rendered from the brand-kit vector (#ts-wm light,
+   #ts-wmr reversed). Never a font substitute; never redrawn. */
+.ts-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.brand { display: inline-flex; align-items: center; line-height: 0; }
+.wordmark__svg { display: block; height: 1.5rem; width: auto; }
+.brand--lg .wordmark__svg { height: 2rem; }
+/* Nav shows the reversed (silk) mark over the dark hero, and swaps to the
+   navy mark once scrolled / when the mobile menu is open. */
+.wm--light { display: none; }
+.nav.is-scrolled .brand .wm--dark { display: none; }
+.nav.is-scrolled .brand .wm--light { display: block; }
+.nav.on-dark.is-open .brand .wm--dark { display: none; }
+.nav.on-dark.is-open .brand .wm--light { display: block; }
 
 /* Blueprint grid background graphic */
 .blueprint {
@@ -381,8 +364,7 @@ strong { font-weight: 700; }
 .nav.is-scrolled { background: #fbfaf6e6; backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom-color: var(--line); box-shadow: 0 1px 0 var(--line); }
 
 /* nav over dark hero (top, not scrolled) */
-.nav.on-dark:not(.is-scrolled) .nav__link,
-.nav.on-dark:not(.is-scrolled) .wordmark { color: var(--cloud); }
+.nav.on-dark:not(.is-scrolled) .nav__link { color: var(--cloud); }
 .nav.on-dark:not(.is-scrolled) .nav__burger span,
 .nav.on-dark:not(.is-scrolled) .nav__burger span::before,
 .nav.on-dark:not(.is-scrolled) .nav__burger span::after { background: var(--cloud); }
@@ -560,7 +542,7 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
   /* When the menu is open, make the whole top bar solid so the
      navy logo + burger are visible (fixes invisible logo over hero) */
   .nav.is-open { background: var(--porcelain); border-bottom-color: var(--line); }
-  .nav.on-dark.is-open .nav__link, .nav.on-dark.is-open .wordmark { color: var(--navy); }
+  .nav.on-dark.is-open .nav__link { color: var(--navy); }
   .nav.on-dark.is-open .nav__burger span,
   .nav.on-dark.is-open .nav__burger span::before,
   .nav.on-dark.is-open .nav__burger span::after { background: var(--navy); }
@@ -632,9 +614,6 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
 }
 [lang="ar"] .lead { line-height: 1.85; }
 [lang="ar"] p { line-height: 1.9; }
-/* The wordmark stays Latin & LTR per brand guidelines — force
-   left-to-right so the engineered "E" never reorders in RTL */
-.wordmark { font-family: var(--font-display); direction: ltr; unicode-bidi: isolate; }
 /* Mono/label elements: switch to Arabic face, drop tracking & uppercase (breaks Arabic shaping) */
 [lang="ar"] .kicker, [lang="ar"] .footer__col h4, [lang="ar"] .stat__label, [lang="ar"] .breadcrumb,
 [lang="ar"] .pill, [lang="ar"] .client-card__tag, [lang="ar"] .engagement__sector, [lang="ar"] .info-item h4,
@@ -695,13 +674,11 @@ html.ts-intro-lock, html.ts-intro-lock body { overflow: hidden; height: 100%; }
   display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
 }
 
-/* Wordmark scales/clips in */
+/* Official wordmark vector scales + clips in left→right */
 .ts-intro__mark {
-  font-size: clamp(2rem, 7vw, 3.4rem);
-  letter-spacing: 0.16em;
+  width: clamp(220px, 56vw, 460px); height: auto;
   opacity: 0;
   transform: translateY(8px) scale(.96);
-  /* reveal the letters left→right via clip */
   -webkit-clip-path: inset(0 100% 0 0);
           clip-path: inset(0 100% 0 0);
   transition:
@@ -715,13 +692,6 @@ html.ts-intro-lock, html.ts-intro-lock body { overflow: hidden; height: 100%; }
   -webkit-clip-path: inset(0 0 0 0);
           clip-path: inset(0 0 0 0);
 }
-
-/* The teal middle bar of the engineered E pulses in last */
-.ts-intro__mark .wordmark__e i:nth-child(2) {
-  opacity: 0;
-  transition: opacity .45s var(--ease) 1s;
-}
-.ts-intro.is-playing .ts-intro__mark .wordmark__e i:nth-child(2) { opacity: 1; }
 
 /* Tagline fades up */
 .ts-intro__tagline {

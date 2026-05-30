@@ -27,10 +27,8 @@
   ov.setAttribute("aria-hidden", "true");
   ov.innerHTML =
     '<div class="ts-intro__inner">' +
-      '<span class="wordmark wordmark--light ts-intro__mark">' +
-        'T<span class="wordmark__e" aria-hidden="true"><i></i><i></i><i></i></span>' +
-        '<span class="sr-only">E</span>CHSYS' +
-      '</span>' +
+      '<svg class="ts-intro__mark" viewBox="217 230 1502 214" role="img" aria-label="TECHSYS">' +
+        '<use href="#ts-wmr"/></svg>' +
       '<span class="ts-intro__tagline">Engineered Clarity</span>' +
       '<span class="ts-intro__sweep"></span>' +
     '</div>';
