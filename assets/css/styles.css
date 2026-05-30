@@ -496,7 +496,11 @@ strong { font-weight: 700; }
 .logostrip { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 /* 8. MOTION ------------------------------------------------ */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+/* Reveal-on-scroll. Content is VISIBLE BY DEFAULT — the hidden start
+   state is only applied once JS confirms it can animate (html.anim-ready).
+   If JS is disabled, fails, or is slow, nothing is ever hidden → no white page. */
+.reveal { transition: opacity .7s var(--ease), transform .7s var(--ease); }
+html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
 .reveal.is-in { opacity: 1; transform: none; }
 .reveal[data-d="1"] { transition-delay: .08s; }
 .reveal[data-d="2"] { transition-delay: .16s; }

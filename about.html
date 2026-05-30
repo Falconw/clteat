@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script>(function(){try{var l=localStorage.getItem("ts-lang");if(l==="ar"){var d=document.documentElement;d.lang="ar";d.dir="rtl";}}catch(e){}})();</script>
+  <script>(function(){var d=document.documentElement;try{if(localStorage.getItem("ts-lang")==="ar"){d.lang="ar";d.dir="rtl";}}catch(e){}d.classList.add("anim-ready");window.addEventListener("load",function(){setTimeout(function(){if(!window.__ts_reveal_ok)d.classList.remove("anim-ready");},1200);});})();</script>
   <title>About TechSys — Discipline, Taste &amp; Technical Judgment</title>
   <meta name="description" content="TechSys is a Saudi-based technology partner that understands the business before it builds. Learn what we believe, how we work, and why organisations choose us." />
   <meta name="theme-color" content="#071A24" />
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
 </head>
 <body>
   <a href="#main" class="skip-link" style="position:absolute;left:-9999px;">Skip to content</a>
@@ -174,7 +174,7 @@
       <div class="footer__bar"><span>© <span data-year>2026</span> TechSys · CR 7051009251</span><span>Engineered Clarity · Riyadh, KSA</span></div>
     </div>
   </footer>
-  <script src="assets/js/i18n.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/i18n.js?v=4" defer></script>
+  <script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>

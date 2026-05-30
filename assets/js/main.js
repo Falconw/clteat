@@ -35,6 +35,10 @@
   }
 
   /* --- Reveal on scroll (IntersectionObserver) -------------- */
+  // Signal the head-script failsafe that the animation layer is alive.
+  // If this file ever fails to load/parse, the flag stays false and the
+  // failsafe removes `anim-ready`, leaving all content visible (no white page).
+  window.__ts_reveal_ok = true;
   const reveals = document.querySelectorAll(".reveal");
   if (reveals.length) {
     if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -50,6 +54,16 @@
         { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
       );
       reveals.forEach((el) => io.observe(el));
+      // Belt-and-suspenders: anything still hidden a moment after full load
+      // (e.g. observer never fired) gets shown so content can't get stuck.
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.querySelectorAll(".reveal:not(.is-in)").forEach(function (el) {
+            var r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight) el.classList.add("is-in");
+          });
+        }, 1400);
+      });
     } else {
       reveals.forEach((el) => el.classList.add("is-in"));
     }
