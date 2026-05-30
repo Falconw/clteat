@@ -594,8 +594,9 @@ html.i18n-busy body { visibility: hidden; }
 }
 [lang="ar"] .lead { line-height: 1.85; }
 [lang="ar"] p { line-height: 1.9; }
-/* The wordmark stays Latin per brand guidelines */
-.wordmark { font-family: var(--font-display); }
+/* The wordmark stays Latin & LTR per brand guidelines — force
+   left-to-right so the engineered "E" never reorders in RTL */
+.wordmark { font-family: var(--font-display); direction: ltr; unicode-bidi: isolate; }
 /* Mono/label elements: switch to Arabic face, drop tracking & uppercase (breaks Arabic shaping) */
 [lang="ar"] .kicker, [lang="ar"] .footer__col h4, [lang="ar"] .stat__label, [lang="ar"] .breadcrumb,
 [lang="ar"] .pill, [lang="ar"] .client-card__tag, [lang="ar"] .engagement__sector, [lang="ar"] .info-item h4,
