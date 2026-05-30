@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="TechSys monogram">
+  <rect width="100" height="100" rx="24" fill="#082A3A"/>
+  <g transform="skewX(-12) translate(8 0)" fill="#F5F2EA">
+    <!-- T -->
+    <rect x="14" y="30" width="34" height="9" rx="1"/>
+    <rect x="26" y="30" width="10" height="42" rx="1"/>
+    <!-- E (top & bottom bars) -->
+    <rect x="50" y="30" width="28" height="9" rx="1"/>
+    <rect x="48" y="63" width="28" height="9" rx="1"/>
+  </g>
+  <!-- E middle bar = the single teal signal -->
+  <g transform="skewX(-12) translate(8 0)">
+    <rect x="49" y="46.5" width="25" height="9" rx="1" fill="#00C2A8"/>
+  </g>
+</svg>
