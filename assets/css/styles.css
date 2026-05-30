@@ -540,8 +540,26 @@ strong { font-weight: 700; }
   .nav__link::after { display: none; }
   .nav__cta { margin-top: 1.25rem; }
   .nav__cta .btn { width: 100%; justify-content: center; }
-  /* force dark-hero nav text back to navy when menu open */
+
+  /* When the menu is open, make the whole top bar solid so the
+     navy logo + burger are visible (fixes invisible logo over hero) */
+  .nav.is-open { background: var(--porcelain); border-bottom-color: var(--line); }
   .nav.on-dark.is-open .nav__link, .nav.on-dark.is-open .wordmark { color: var(--navy); }
+  .nav.on-dark.is-open .nav__burger span,
+  .nav.on-dark.is-open .nav__burger span::before,
+  .nav.on-dark.is-open .nav__burger span::after { background: var(--navy); }
+  .nav.on-dark.is-open .nav__burger span { background: transparent; }
+
+  /* Language toggle becomes a full-width labelled row inside the menu */
+  .lang-toggle {
+    order: 1; width: 100%; justify-content: center; gap: .6rem;
+    margin-top: 1.25rem; padding: .95rem 1.6rem; font-size: var(--fs-sm);
+    border-color: var(--line-strong); color: var(--navy);
+  }
+  .lang-toggle .globe { width: 17px; height: 17px; }
+  .nav.on-dark:not(.is-scrolled) .lang-toggle,
+  .nav.on-dark.is-open .lang-toggle { color: var(--navy); border-color: var(--line-strong); }
+  .nav__cta { order: 2; }
 }
 @media (max-width: 600px) {
   .grid-2, .grid-3, .form-grid { grid-template-columns: 1fr; }
