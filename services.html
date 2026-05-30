@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>(function(){try{var l=localStorage.getItem('ts-lang');if(l==='ar'){var d=document.documentElement;d.lang='ar';d.dir='rtl';d.classList.add('i18n-busy');setTimeout(function(){d.classList.remove('i18n-busy');},2000);}}catch(e){}})();</script>
   <title>Services — TechSys | Enterprise IT, Engineered for Clarity</title>
   <meta name="description" content="Digital transformation, ERP & IT solutions, IT consultations, support, web & app development and IT procurement — delivered with precision by TechSys." />
   <meta name="theme-color" content="#071A24" />
@@ -13,7 +14,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -29,6 +30,7 @@
         <a class="nav__link" href="services.html" aria-current="page">Services</a>
         <a class="nav__link" href="clients.html">Clients</a>
         <a class="nav__link" href="contact.html">Contact</a>
+        <button class="lang-toggle" data-lang-toggle data-no-translate type="button" aria-label="التبديل إلى العربية"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg><span data-lang-label>عربي</span></button>
         <span class="nav__cta"><a class="btn btn--teal" href="contact.html">Start a Consultation</a></span>
       </nav>
       <button class="nav__burger" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu"><span></span></button>
@@ -235,6 +237,7 @@
       <div class="footer__bar"><span>© <span data-year>2026</span> TechSys · CR 7051009251</span><span>Engineered Clarity · Riyadh, KSA</span></div>
     </div>
   </footer>
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

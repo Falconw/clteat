@@ -63,6 +63,7 @@
   const form = document.querySelector("[data-contact-form]");
   if (form) {
     const status = form.querySelector("[data-form-status]");
+    const T = (s) => (window.TS_I18N && window.TS_I18N.t) ? window.TS_I18N.t(s) : s;
     const setStatus = (type, msg) => {
       if (!status) return;
       status.className = "form-status is-visible form-status--" + type;
@@ -71,12 +72,12 @@
     };
 
     const validators = {
-      name:    (v) => v.trim().length >= 2 || "Please enter your full name.",
-      company: (v) => v.trim().length >= 2 || "Please enter your company name.",
-      email:   (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || "Enter a valid email address.",
-      phone:   (v) => v.trim() === "" || /^[+()\d][\d\s().-]{6,}$/.test(v.trim()) || "Enter a valid phone number.",
-      service: (v) => v.trim() !== "" || "Please choose a service.",
-      message: (v) => v.trim().length >= 10 || "Tell us a little more (10+ characters).",
+      name:    (v) => v.trim().length >= 2 || T("Please enter your full name."),
+      company: (v) => v.trim().length >= 2 || T("Please enter your company name."),
+      email:   (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || T("Enter a valid email address."),
+      phone:   (v) => v.trim() === "" || /^[+()\d][\d\s().-]{6,}$/.test(v.trim()) || T("Enter a valid phone number."),
+      service: (v) => v.trim() !== "" || T("Please choose a service."),
+      message: (v) => v.trim().length >= 10 || T("Tell us a little more (10+ characters)."),
     };
 
     const fieldOf = (input) => input.closest(".field");
@@ -108,19 +109,19 @@
       const inputs = [...form.querySelectorAll("input, select, textarea")];
       const ok = inputs.map(validate).every(Boolean);
       if (!ok) {
-        setStatus("err", iconAlert() + "Please review the highlighted fields and try again.");
+        setStatus("err", iconAlert() + T("Please review the highlighted fields and try again."));
         const firstErr = form.querySelector(".has-error input, .has-error select, .has-error textarea");
         firstErr && firstErr.focus();
         return;
       }
       // Phase 2: POST to a backend / Formspree / API route here.
       const btn = form.querySelector("[type=submit]");
-      const label = btn ? btn.textContent : "";
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      const label = btn ? btn.innerHTML : "";
+      if (btn) { btn.disabled = true; btn.textContent = T("Sending…"); }
       setTimeout(() => {
-        setStatus("ok", iconCheck() + "Thank you — your request has reached TechSys. We'll respond within one business day.");
+        setStatus("ok", iconCheck() + T("Thank you — your request has reached TechSys. We'll respond within one business day."));
         form.reset();
-        if (btn) { btn.disabled = false; btn.textContent = label; }
+        if (btn) { btn.disabled = false; btn.innerHTML = label; }
       }, 700);
     });
 

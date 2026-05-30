@@ -549,3 +549,55 @@ strong { font-weight: 700; }
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bar { flex-direction: column; }
 }
+
+/* 10. BILINGUAL / RTL ------------------------------------- */
+/* Language toggle (nav) */
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-family: var(--font-mono); font-size: .74rem; font-weight: 500; letter-spacing: .06em;
+  color: var(--navy); background: transparent;
+  border: 1.5px solid var(--line-strong); border-radius: var(--r-pill);
+  padding: .42rem .8rem; line-height: 1;
+  transition: border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease);
+}
+.lang-toggle:hover { border-color: var(--navy); }
+.lang-toggle .globe { width: 14px; height: 14px; flex: 0 0 auto; }
+.nav.on-dark:not(.is-scrolled) .lang-toggle { color: var(--cloud); border-color: var(--line-dark); }
+.nav.on-dark:not(.is-scrolled) .lang-toggle:hover { border-color: var(--cloud); }
+.nav.on-dark.is-open .lang-toggle { color: var(--navy); border-color: var(--line-strong); }
+
+/* Prevent flash before Arabic is applied */
+html.i18n-busy body { visibility: hidden; }
+
+/* Arabic typography — Sora/Manrope/JetBrains lack Arabic glyphs */
+[lang="ar"] body { font-family: "IBM Plex Sans Arabic", "Manrope", system-ui, sans-serif; }
+[lang="ar"] h1, [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] h4 {
+  font-family: "IBM Plex Sans Arabic", "Sora", sans-serif; font-weight: 700; letter-spacing: 0; line-height: 1.28;
+}
+[lang="ar"] .lead { line-height: 1.85; }
+[lang="ar"] p { line-height: 1.9; }
+/* The wordmark stays Latin per brand guidelines */
+.wordmark { font-family: var(--font-display); }
+/* Mono/label elements: switch to Arabic face, drop tracking & uppercase (breaks Arabic shaping) */
+[lang="ar"] .kicker, [lang="ar"] .footer__col h4, [lang="ar"] .stat__label, [lang="ar"] .breadcrumb,
+[lang="ar"] .pill, [lang="ar"] .client-card__tag, [lang="ar"] .engagement__sector, [lang="ar"] .info-item h4,
+[lang="ar"] .value, [lang="ar"] .service-card .value, [lang="ar"] .engagement__result em, [lang="ar"] .form-note,
+[lang="ar"] .hero__trust .item, [lang="ar"] .hero__scroll, [lang="ar"] .field label, [lang="ar"] .step__n,
+[lang="ar"] .value-card__n {
+  font-family: "IBM Plex Sans Arabic", var(--font-body); letter-spacing: 0; text-transform: none;
+}
+[lang="ar"] .field label, [lang="ar"] .info-item a, [lang="ar"] .info-item p { font-weight: 600; }
+
+/* Directional flips for RTL */
+[dir="rtl"] .btn svg { transform: scaleX(-1); }
+[dir="rtl"] .btn:hover svg { transform: scaleX(-1) translateX(3px); }
+[dir="rtl"] .client-card__tag { left: auto; right: 1.25rem; }
+[dir="rtl"] .engagement__sector { right: auto; left: 1.1rem; }
+[dir="rtl"] .footer__col a:hover { transform: translateX(-3px); }
+[dir="rtl"] .footer__about p, [dir="rtl"] .cta-band p, [dir="rtl"] .cta-band h2 { margin-inline: 0; }
+[dir="rtl"] .cta-band { text-align: center; }
+/* engineered corner detail → top-left in RTL */
+[dir="rtl"] .service-card::after { right: auto; left: 0; border-left: 0 solid transparent; border-right: 0 solid transparent; }
+[dir="rtl"] .service-card:hover::after { border-top: 26px solid var(--teal); border-left: 0; border-right: 26px solid transparent; }
+/* checkmarks / arrows in feature lists keep direction via flex auto-flip */
+[dir="rtl"] .breadcrumb { direction: rtl; }
