@@ -169,7 +169,7 @@ strong { font-weight: 700; }
 /* Wordmark: Sora letters + engineered "E" (3 bars, middle teal) */
 .wordmark {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -180,10 +180,12 @@ strong { font-weight: 700; }
 }
 .wordmark__e {
   display: inline-block;
-  width: 0.62em; height: 0.74em;
-  margin: 0 0.13em;
+  width: 0.6em; height: 0.72em;
+  margin: 0 0.14em;
   position: relative;
-  top: 0.015em;
+  top: 0;
+  flex: 0 0 auto;
+  align-self: baseline;
 }
 .wordmark__e i {
   position: absolute; left: 0; right: 0; height: 19%;
@@ -661,3 +663,85 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
 [dir="rtl"] .btn-row,
 [dir="rtl"] .hero__trust,
 [dir="rtl"] .form-grid { max-width: 100%; }
+
+/* 11. LOGO INTRO ------------------------------------------- */
+/* Lock scroll while the intro overlay plays */
+html.ts-intro-lock, html.ts-intro-lock body { overflow: hidden; height: 100%; }
+
+.ts-intro {
+  position: fixed; inset: 0; z-index: 1000;
+  display: grid; place-items: center;
+  background: var(--obsidian);
+  opacity: 1;
+  transition: opacity .7s var(--ease);
+}
+.ts-intro.is-leaving { opacity: 0; pointer-events: none; }
+
+/* subtle blueprint + aura backdrop, matching the hero */
+.ts-intro::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--line-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(120% 90% at 50% 45%, #000 0%, transparent 70%);
+          mask-image: radial-gradient(120% 90% at 50% 45%, #000 0%, transparent 70%);
+  opacity: 0; transition: opacity .8s var(--ease);
+}
+.ts-intro.is-playing::before { opacity: 1; }
+
+.ts-intro__inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
+}
+
+/* Wordmark scales/clips in */
+.ts-intro__mark {
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  letter-spacing: 0.16em;
+  opacity: 0;
+  transform: translateY(8px) scale(.96);
+  /* reveal the letters left→right via clip */
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+  transition:
+    opacity .5s var(--ease),
+    transform .9s var(--ease),
+    clip-path 1s var(--ease) .15s,
+    -webkit-clip-path 1s var(--ease) .15s;
+}
+.ts-intro.is-playing .ts-intro__mark {
+  opacity: 1; transform: none;
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+
+/* The teal middle bar of the engineered E pulses in last */
+.ts-intro__mark .wordmark__e i:nth-child(2) {
+  opacity: 0;
+  transition: opacity .45s var(--ease) 1s;
+}
+.ts-intro.is-playing .ts-intro__mark .wordmark__e i:nth-child(2) { opacity: 1; }
+
+/* Tagline fades up */
+.ts-intro__tagline {
+  font-family: var(--font-mono);
+  font-size: .72rem; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--teal);
+  opacity: 0; transform: translateY(6px);
+  transition: opacity .6s var(--ease) 1.05s, transform .6s var(--ease) 1.05s;
+}
+.ts-intro.is-playing .ts-intro__tagline { opacity: 1; transform: none; }
+
+/* A single teal sweep line under the mark */
+.ts-intro__sweep {
+  position: absolute; left: 50%; bottom: -.6rem;
+  width: 0; height: 2px; background: var(--teal);
+  transform: translateX(-50%);
+  transition: width .8s var(--ease) .35s;
+}
+.ts-intro.is-playing .ts-intro__sweep { width: min(70%, 280px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-intro { display: none; }
+}
