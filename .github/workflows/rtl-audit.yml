@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -22,7 +25,19 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Run RTL / overflow audit
+        id: audit
+        continue-on-error: true
         run: node test/rtl-audit.js
+
+      - name: Commit report back to repo
+        if: always()
+        run: |
+          git config user.name "rtl-audit-bot"
+          git config user.email "actions@github.com"
+          git add -f test/REPORT.md
+          git commit -m "chore: RTL audit report [skip ci]" || { echo "no change"; exit 0; }
+          git pull --rebase origin main || true
+          git push origin HEAD:main || echo "push skipped"
 
       - name: Upload screenshots
         if: always()
@@ -31,3 +46,7 @@ jobs:
           name: rtl-screenshots
           path: test/shots/
           if-no-files-found: ignore
+
+      - name: Fail if audit failed
+        if: steps.audit.outcome == 'failure'
+        run: exit 1

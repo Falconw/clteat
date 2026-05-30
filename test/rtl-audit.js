@@ -46,6 +46,7 @@ function serve() {
   const browser = await chromium.launch();
   let failures = 0;
   const summary = [];
+  const detailLog = [];
 
   for (const page of PAGES) {
     for (const lang of ["en", "ar"]) {
@@ -87,10 +88,13 @@ function serve() {
         if (bad) failures++;
         const line = `${bad ? "✗" : "✓"} ${tag}  [dir=${report.dir}]  docOverflow=${report.docOverflow}px`;
         summary.push(line);
+        detailLog.push(line);
         console.log(line);
-        report.offenders.forEach((o) =>
-          console.log(`      ↳ ${o.sel}  (overRight=${o.overRight} overLeft=${o.overLeft} w=${o.w})`)
-        );
+        report.offenders.forEach((o) => {
+          const ol = `      ↳ ${o.sel}  (overRight=${o.overRight} overLeft=${o.overLeft} w=${o.w})`;
+          detailLog.push(ol);
+          console.log(ol);
+        });
 
         if (vp.name === "mobile") {
           await pg.screenshot({ path: path.join(__dirname, "shots", `${page.replace(".html", "")}-${lang}.png`), fullPage: true });
@@ -105,5 +109,21 @@ function serve() {
   console.log("\n──────── SUMMARY ────────");
   summary.forEach((l) => console.log(l));
   console.log(failures === 0 ? "\n✅ No horizontal overflow anywhere." : `\n❌ ${failures} view(s) overflow. See offenders above.`);
+
+  // Write a machine-readable report back to the repo so it can be reviewed
+  // without access to CI logs.
+  const reportLines = [
+    "# RTL / overflow audit report",
+    "",
+    `Generated: ${new Date().toISOString()}`,
+    `Result: ${failures === 0 ? "PASS — no horizontal overflow" : "FAIL — " + failures + " view(s) overflow"}`,
+    "",
+    "```",
+    ...detailLog,
+    "```",
+    "",
+  ].join("\n");
+  fs.writeFileSync(path.join(ROOT, "test", "REPORT.md"), reportLines);
+
   process.exit(failures === 0 ? 0 : 1);
 })();
