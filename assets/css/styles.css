@@ -580,6 +580,30 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
   .hero__trust { gap: 1rem 1.75rem; }
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bar { flex-direction: column; }
+
+  /* More breathing room on phones */
+  /* Taller vertical rhythm between sections */
+  .section { padding-block: clamp(4.5rem, 14vw, 6rem); }
+  .section--tight { padding-block: clamp(3.5rem, 11vw, 5rem); }
+  /* Roomier side gutters */
+  .container { padding-inline: 1.5rem; }
+  /* Bigger gaps between stacked cards / grid items */
+  .grid { gap: 1.5rem; }
+  .split { gap: 2.5rem; }
+  /* Section intros sit further from the content below */
+  .section-head { margin-bottom: 2.5rem; }
+  /* Cards & panels get more internal padding */
+  .card, .belief, .value-card, .engagement__body, .form-card { padding: 1.75rem; }
+  /* Hero has more top/bottom air */
+  .hero { padding-top: 96px; padding-bottom: 3.5rem; }
+  .hero__lead { margin-bottom: 2rem; }
+  .hero .btn-row { margin-bottom: 2.5rem; }
+  .hero__trust { padding-top: 1.75rem; }
+  /* Stack the two hero CTAs full-width with space */
+  .hero .btn-row { gap: 1rem; }
+  .hero .btn-row .btn { width: 100%; justify-content: center; }
+  /* CTA band roomier inside */
+  .cta-band { padding: 2.75rem 1.75rem; }
 }
 
 /* 10. BILINGUAL / RTL ------------------------------------- */
