@@ -47,7 +47,7 @@
   --font-mono:    "JetBrains Mono", ui-monospace, monospace;
 
   /* Fluid type scale */
-  --fs-display: clamp(2.75rem, 1.6rem + 5.1vw, 6rem);
+  --fs-display: clamp(2.1rem, 1.4rem + 3.4vw, 5.25rem);
   --fs-h1:      clamp(2.25rem, 1.5rem + 3.2vw, 4rem);
   --fs-h2:      clamp(1.9rem, 1.4rem + 2.1vw, 3rem);
   --fs-h3:      clamp(1.3rem, 1.1rem + 0.9vw, 1.75rem);
@@ -195,6 +195,14 @@ strong { font-weight: 700; }
   background-image:
     linear-gradient(var(--line-dark) 1px, transparent 1px),
     linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
+}
+/* Hero grid: keep it as a whisper of texture, never competing with the
+   headline. Larger cells + lower opacity + fade toward the content. */
+.hero .blueprint--dark {
+  opacity: .5;
+  background-size: 88px 88px;
+  -webkit-mask-image: radial-gradient(110% 80% at 85% 0%, #000 0%, transparent 60%);
+          mask-image: radial-gradient(110% 80% at 85% 0%, #000 0%, transparent 60%);
 }
 /* Soft teal aura */
 .aura { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .4; pointer-events: none; z-index: 0; max-width: 100%; }
@@ -437,7 +445,7 @@ strong { font-weight: 700; }
 .hero__bg { position: absolute; inset: 0; z-index: 0; }
 .hero__inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr .85fr; gap: 3rem; align-items: center; width: 100%; }
 .hero__eyebrow { margin-bottom: 1.75rem; }
-.hero h1 { font-size: var(--fs-display); color: var(--cloud); margin-bottom: 1.5rem; }
+.hero h1 { font-size: var(--fs-display); font-weight: 600; line-height: 1.04; color: var(--cloud); margin-bottom: 1.5rem; }
 .hero h1 .sig { color: var(--teal); }
 .hero__lead { font-size: var(--fs-lead); color: #c6d4d7; max-width: 46ch; margin-bottom: 2.5rem; }
 .hero .btn-row { margin-bottom: 3rem; }
@@ -578,14 +586,16 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
   .section-head { margin-bottom: 2.5rem; }
   /* Cards & panels get more internal padding */
   .card, .belief, .value-card, .engagement__body, .form-card { padding: 1.75rem; }
-  /* Hero has more top/bottom air */
+  /* Hero: calmer rhythm + clear hierarchy steps */
   .hero { padding-top: 96px; padding-bottom: 3.5rem; }
-  .hero__lead { margin-bottom: 2rem; }
-  .hero .btn-row { margin-bottom: 2.5rem; }
-  .hero__trust { padding-top: 1.75rem; }
-  /* Stack the two hero CTAs full-width with space */
-  .hero .btn-row { gap: 1rem; }
+  .hero__eyebrow { margin-bottom: 1.25rem; }
+  /* Keep the eyebrow on one tidy line */
+  .hero__eyebrow .kicker { font-size: .68rem; letter-spacing: .12em; }
+  .hero h1 { margin-bottom: 1.25rem; }
+  .hero__lead { font-size: 1.05rem; line-height: 1.65; margin-bottom: 2rem; }
+  .hero .btn-row { margin-bottom: 2.5rem; gap: 1rem; }
   .hero .btn-row .btn { width: 100%; justify-content: center; }
+  .hero__trust { padding-top: 1.75rem; }
   /* CTA band roomier inside */
   .cta-band { padding: 2.75rem 1.75rem; }
 }
