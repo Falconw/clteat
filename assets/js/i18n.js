@@ -55,7 +55,7 @@
 
     /* HOME — hero */
     "Empowering organizations with tailored technology and trusted partnerships for": "نُمكّن المؤسسات عبر حلول تقنية مصمّمة بعناية وشراكات موثوقة، لقيادة",
-    "seamless transformation.": "تحوّل سلس ومستدام.",
+    "seamless transformation.": "تحوّل متكامل ومستدام.",
     "TechSys partners with organizations to design, build, and support tailored technology ecosystems that strengthen operations, enable progress, and deliver long-term value.": "تتشارك تك سيس مع المؤسسات لتصميم وبناء ودعم منظومات تقنية مصمّمة بعناية تُعزّز العمليات، وتُمكّن التقدّم، وتُحقّق قيمة طويلة الأمد.",
     "Saudi-based, enterprise-ready": "مقرّها السعودية، وجاهزة للمؤسسات",
     "Core practices": "ممارسات أساسية",
