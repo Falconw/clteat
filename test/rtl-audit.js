@@ -19,6 +19,7 @@ const ROOT = path.resolve(__dirname, "..");
 const PAGES = ["index.html", "about.html", "services.html", "clients.html", "contact.html"];
 const VIEWPORTS = [
   { name: "mobile", width: 390, height: 844 },
+  { name: "narrow", width: 960, height: 860 },
   { name: "desktop", width: 1280, height: 900 },
 ];
 const MIME = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml" };

@@ -363,6 +363,7 @@ strong { font-weight: 700; }
 .nav__link:hover, .nav__link[aria-current="page"] { color: var(--navy); }
 .nav__link:hover::after, .nav__link[aria-current="page"]::after { width: 100%; }
 .nav__cta { display: inline-flex; }
+.nav__cta .btn { white-space: nowrap; }
 .nav__burger { display: none; width: 44px; height: 44px; border-radius: var(--r-sm); align-items: center; justify-content: center; }
 .nav__burger span { position: relative; width: 22px; height: 2px; background: var(--navy); transition: .3s var(--ease); }
 .nav__burger span::before, .nav__burger span::after { content:""; position:absolute; left:0; width:22px; height:2px; background: var(--navy); transition: .3s var(--ease); }
@@ -520,16 +521,10 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
 @media (max-width: 1024px) {
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__about { grid-column: 1 / -1; }
-}
-@media (max-width: 900px) {
-  .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
-  .sysviz { display: none; }
-  .split { grid-template-columns: 1fr; }
-  .svc-row { grid-template-columns: 1fr; }
-  .svc-row__head { position: static; }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
 
-  /* Mobile nav */
+  /* Mobile nav (burger) — engage before the desktop bar gets cramped in
+     the ~900–1024px band, where the CTA used to wrap onto two lines and
+     balloon out of the header. */
   .nav__burger { display: inline-flex; }
   .nav__links {
     position: fixed; inset: 76px 0 auto 0;
@@ -566,6 +561,14 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
   .nav.on-dark:not(.is-scrolled) .lang-toggle,
   .nav.on-dark.is-open .lang-toggle { color: var(--navy); border-color: var(--line-strong); }
   .nav__cta { order: 2; }
+}
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sysviz { display: none; }
+  .split { grid-template-columns: 1fr; }
+  .svc-row { grid-template-columns: 1fr; }
+  .svc-row__head { position: static; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
   .grid-2, .grid-3, .form-grid { grid-template-columns: 1fr; }
