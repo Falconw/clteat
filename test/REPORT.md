@@ -1,6 +1,6 @@
 # RTL / overflow audit report
 
-Generated: 2026-06-01T20:02:49.318Z
+Generated: 2026-06-01T20:13:13.081Z
 Result: PASS — no horizontal overflow
 
 ```

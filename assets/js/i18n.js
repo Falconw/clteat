@@ -68,13 +68,13 @@
     "TechSys is a Saudi-based technology partner serving organizations where reliable systems are essential. We partner with enterprises, institutions, and growing businesses to design, implement, and manage technology environments built for structure, continuity, and operational alignment.": "تك سيس شريك تقني مقرّه السعودية يخدم المؤسسات التي تُعدّ فيها الأنظمة الموثوقة أمراً أساسياً. نتشارك مع الشركات الكبرى والمؤسسات والأعمال النامية لتصميم وتنفيذ وإدارة بيئات تقنية مبنية على البنية والاستمرارية والمواءمة التشغيلية.",
     "We begin with the operation, not the technology. By understanding how each business works, we design practical, scalable systems built to last, delivering trusted infrastructure and platforms that support teams today and grow with the organization tomorrow.": "نبدأ من العملية، لا من التقنية. وبفهم طريقة عمل كل مؤسسة، نصمّم أنظمة عملية وقابلة للتوسّع مبنية لتدوم، فنقدّم بنية تحتية ومنصّات موثوقة تدعم الفرق اليوم وتنمو مع المؤسسة غداً.",
     "Analyze": "تحليل",
-    "We begin by understanding how your business works — its workflows, constraints and goals — so every decision is grounded in how you actually operate.": "نبدأ بفهم طريقة عمل مؤسستك — مساراتها وقيودها وأهدافها — ليكون كل قرار مبنياً على طريقة عملك الفعلية.",
+    "We begin by understanding how your business works, its workflows, constraints and goals, so every decision is grounded in how you actually operate.": "نبدأ بفهم طريقة عمل مؤسستك، مساراتها وقيودها وأهدافها، ليكون كل قرار مبنياً على طريقة عملك الفعلية.",
     "Architect": "هندسة",
     "Then we design a system that fits those needs: clear structure, sensible integration and room to scale, without unnecessary complexity.": "ثم نصمّم نظاماً يناسب تلك الاحتياجات: بنية واضحة وتكامل منطقي ومساحة للتوسّع، دون تعقيد لا داعي له.",
     "Deploy": "تنفيذ",
     "We implement carefully and document as we go, so the system launches smoothly and stays easy to maintain for your team and ours.": "ننفّذ بعناية ونوثّق أثناء العمل، ليُطلق النظام بسلاسة ويبقى سهل الصيانة لفريقك ولنا.",
     "Sustain": "استدامة",
-    "After launch, we stay involved — with support, monitoring and ongoing improvements that keep your operations reliable over time.": "بعد الإطلاق، نبقى على تواصل — بالدعم والمراقبة والتحسينات المستمرّة التي تُبقي عملياتك موثوقة مع مرور الوقت.",
+    "After launch, we stay involved, with support, monitoring and ongoing improvements that keep your operations reliable over time.": "بعد الإطلاق، نبقى على تواصل، بالدعم والمراقبة والتحسينات المستمرّة التي تُبقي عملياتك موثوقة مع مرور الوقت.",
 
     /* HOME — services */
     "02 — What we do": "02 — ماذا نقدّم",
