@@ -43,6 +43,20 @@
       }, { passive: true });
       nav.addEventListener("touchend", () => { swipeY = null; }, { passive: true });
     }
+
+    /* --- Animated wordmark: swap static SVG -> APNG once loaded ----
+       The nav <img>s render the crisp static SVG first (instant, no
+       layout shift). Each carries a `data-anim` APNG; we preload it and
+       swap `src` only after it loads, so a failed/blocked APNG silently
+       leaves the SVG in place. Skipped for reduced-motion users. */
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      nav.querySelectorAll(".brand .wordmark__img[data-anim]").forEach((img) => {
+        const next = img.getAttribute("data-anim");
+        const pre = new Image();
+        pre.addEventListener("load", () => { img.src = next; });
+        pre.src = next;
+      });
+    }
   }
 
   /* --- Reveal on scroll (IntersectionObserver) -------------- */
