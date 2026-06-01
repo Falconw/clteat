@@ -576,6 +576,10 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bar { flex-direction: column; }
 
+  /* Trim the nav wordmark on phones — at full size it reads a touch large
+     against the narrow bar (footer wordmark left untouched). */
+  .nav .wordmark__img { height: 1.3rem; }
+
   /* More breathing room on phones */
   /* Taller vertical rhythm between sections */
   .section { padding-block: clamp(4.5rem, 14vw, 6rem); }
