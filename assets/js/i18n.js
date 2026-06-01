@@ -36,6 +36,7 @@
     "Saudi Arabia": "العربية السعودية",
     "Riyadh, Kingdom of Saudi Arabia": "الرياض، المملكة العربية السعودية",
     "Engineered Clarity · Riyadh, KSA": "وضوحٌ هندسي · الرياض، السعودية",
+    "Where Dreams Are Born · Saudi Arabia & Middle East": "حيث تُولد الأحلام · السعودية والشرق الأوسط",
     "Engineered Clarity. We design, build and integrate enterprise technology — the systems that keep organisations running.": "وضوحٌ هندسي. نصمّم ونبني ونُكامل تقنية المؤسسات — الأنظمة التي تُبقي المؤسسات تعمل.",
 
     /* Breadcrumb trailing segments */
@@ -53,12 +54,12 @@
     "IT Procurement": "توريد تقنية المعلومات",
 
     /* HOME — hero */
-    "Empowering organizations with tailored technology and trusted partnerships for": "نُمكّن المؤسسات بتقنية مُصمّمة وشراكات موثوقة من أجل",
-    "seamless transformation.": "تحوّل سلس.",
-    "TechSys designs, builds and integrates the IT systems, infrastructure, digital platforms and support operations that keep serious organisations running — with precision, clarity and long-term value.": "تُصمّم تك سيس وتبني وتُكامل أنظمة تقنية المعلومات والبنية التحتية والمنصات الرقمية وعمليات الدعم التي تُبقي المؤسسات الجادّة تعمل — بدقّة ووضوح وقيمة طويلة الأمد.",
+    "Empowering organizations with tailored technology and trusted partnerships for": "نُمكّن المؤسسات عبر حلول تقنية مصمّمة بعناية وشراكات موثوقة، لقيادة",
+    "seamless transformation.": "تحوّل سلس ومستدام.",
+    "TechSys partners with organizations to design, build, and support tailored technology ecosystems that strengthen operations, enable progress, and deliver long-term value.": "تتشارك تك سيس مع المؤسسات لتصميم وبناء ودعم منظومات تقنية مصمّمة بعناية تُعزّز العمليات، وتُمكّن التقدّم، وتُحقّق قيمة طويلة الأمد.",
     "Saudi-based, enterprise-ready": "مقرّها السعودية، وجاهزة للمؤسسات",
     "Core practices": "ممارسات أساسية",
-    "Build · run · support": "بناء · تشغيل · دعم",
+    "Analyze → Architect → Deploy → Sustain": "تحليل ← هندسة ← تنفيذ ← استدامة",
     "Scroll": "مرِّر",
 
     /* HOME — message */
