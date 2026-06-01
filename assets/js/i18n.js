@@ -64,17 +64,17 @@
 
     /* HOME — message */
     "01 — Who we are": "01 — من نحن",
-    "Technology should fit the business — not the other way around.": "ينبغي أن تتكيّف التقنية مع العمل — لا العكس.",
-    "TechSys is a Saudi-based technology partner for organisations that depend on their systems. We work with enterprises, institutions and growing businesses to plan, build and run technology that is reliable, well-structured and genuinely aligned with how they operate.": "تك سيس شريك تقني مقرّه السعودية للمؤسسات التي تعتمد على أنظمتها. نعمل مع الشركات الكبرى والمؤسسات والأعمال النامية لتخطيط وبناء وتشغيل تقنية موثوقة وجيّدة البنية ومتوائمة فعلياً مع طريقة عملها.",
-    "We don't sell technology for its own sake. We understand the operation first, then design systems that fit it — practical, scalable and built to last. The result is clarity: infrastructure and platforms your teams can trust, and that grow with you.": "نحن لا نبيع التقنية لذاتها. نفهم العملية أولاً، ثم نصمّم أنظمة تناسبها — عملية وقابلة للتوسّع ومبنية لتدوم. والنتيجة وضوح: بنية تحتية ومنصّات تثق بها فرقك وتنمو معك.",
-    "Business-aligned": "متوائمة مع العمل",
-    "Every system maps to a real operational need — measured by the outcome it delivers, not the tooling it uses.": "كل نظام يرتبط بحاجة تشغيلية حقيقية — يُقاس بالنتيجة التي يحقّقها، لا بالأدوات التي يستخدمها.",
-    "Built to last": "مبنية لتدوم",
-    "Clean architecture, documented decisions and maintainable systems that stay dependable long after launch.": "بنية معمارية نظيفة وقرارات موثّقة وأنظمة قابلة للصيانة تبقى موثوقة طويلاً بعد الإطلاق.",
-    "Clear by design": "واضحة بالتصميم",
-    "We make complex infrastructure simple to operate, with one source of truth and no hidden complexity.": "نجعل البنية التحتية المعقّدة سهلة التشغيل، بمصدرٍ واحد للحقيقة ودون تعقيد خفيّ.",
-    "Accountable": "مسؤولون",
-    "We plan, implement and support — staying responsible for reliability across the full lifecycle of your systems.": "نخطّط وننفّذ وندعم — ونبقى مسؤولين عن الموثوقية عبر دورة حياة أنظمتك كاملة.",
+    "Technology works best when it is shaped around the business it serves.": "تعمل التقنية على أكمل وجه حين تُصمّم حول العمل الذي تخدمه.",
+    "TechSys is a Saudi-based technology partner serving organizations where reliable systems are essential. We partner with enterprises, institutions, and growing businesses to design, implement, and manage technology environments built for structure, continuity, and operational alignment.": "تك سيس شريك تقني مقرّه السعودية يخدم المؤسسات التي تُعدّ فيها الأنظمة الموثوقة أمراً أساسياً. نتشارك مع الشركات الكبرى والمؤسسات والأعمال النامية لتصميم وتنفيذ وإدارة بيئات تقنية مبنية على البنية والاستمرارية والمواءمة التشغيلية.",
+    "We begin with the operation, not the technology. By understanding how each business works, we design practical, scalable systems built to last, delivering trusted infrastructure and platforms that support teams today and grow with the organization tomorrow.": "نبدأ من العملية، لا من التقنية. وبفهم طريقة عمل كل مؤسسة، نصمّم أنظمة عملية وقابلة للتوسّع مبنية لتدوم، فنقدّم بنية تحتية ومنصّات موثوقة تدعم الفرق اليوم وتنمو مع المؤسسة غداً.",
+    "Analyze": "تحليل",
+    "We start by understanding the operation — its workflows, constraints and goals — so every decision is grounded in how the business actually runs.": "نبدأ بفهم العملية — مساراتها وقيودها وأهدافها — ليكون كل قرار مبنياً على طريقة عمل المؤسسة فعلاً.",
+    "Architect": "هندسة",
+    "We design the right system for real needs: clear structure, sensible integration and room to scale, with no over-engineering.": "نصمّم النظام الصحيح للاحتياجات الحقيقية: بنية واضحة وتكامل منطقي ومساحة للنمو، دون هندسة مفرطة.",
+    "Deploy": "تنفيذ",
+    "We implement with precision and document as we go, so the system launches cleanly and stays maintainable by your team and ours.": "ننفّذ بدقّة ونوثّق أثناء العمل، ليُطلق النظام بسلاسة ويبقى قابلاً للصيانة من فريقك ومنّا.",
+    "Sustain": "استدامة",
+    "We stay accountable after launch — support, monitoring and continuous improvement that keep operations dependable for the long term.": "نبقى مسؤولين بعد الإطلاق — دعم ومراقبة وتحسين مستمرّ يُبقي العمليات موثوقة على المدى الطويل.",
 
     /* HOME — services */
     "02 — What we do": "02 — ماذا نقدّم",
