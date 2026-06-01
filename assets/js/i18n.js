@@ -53,9 +53,8 @@
     "IT Procurement": "توريد تقنية المعلومات",
 
     /* HOME — hero */
-    "Enterprise technology,": "تقنية المؤسسات،",
-    "designed around": "مصمّمة حول",
-    "your business.": "أعمالك.",
+    "Empowering organizations with tailored technology and trusted partnerships for": "نُمكّن المؤسسات بتقنية مُصمّمة وشراكات موثوقة من أجل",
+    "seamless transformation.": "تحوّل سلس.",
     "TechSys designs, builds and integrates the IT systems, infrastructure, digital platforms and support operations that keep serious organisations running — with precision, clarity and long-term value.": "تُصمّم تك سيس وتبني وتُكامل أنظمة تقنية المعلومات والبنية التحتية والمنصات الرقمية وعمليات الدعم التي تُبقي المؤسسات الجادّة تعمل — بدقّة ووضوح وقيمة طويلة الأمد.",
     "Saudi-based, enterprise-ready": "مقرّها السعودية، وجاهزة للمؤسسات",
     "Core practices": "ممارسات أساسية",
