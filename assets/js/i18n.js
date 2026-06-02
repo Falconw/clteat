@@ -37,7 +37,7 @@
     "Riyadh, Kingdom of Saudi Arabia": "الرياض، المملكة العربية السعودية",
     "Engineered Clarity · Riyadh, KSA": "وضوحٌ هندسي · الرياض، السعودية",
     "Where Dreams Are Born · Saudi Arabia & Middle East": "حيث تُولد الأحلام · السعودية والشرق الأوسط",
-    "Engineered Clarity. We design, build and integrate enterprise technology — the systems that keep organisations running.": "وضوحٌ هندسي. نصمّم ونبني ونُكامل تقنية المؤسسات — الأنظمة التي تُبقي المؤسسات تعمل.",
+    "We partner with organizations to design, build and support the technology that keeps them running.": "نتشارك مع المؤسسات لتصميم وبناء ودعم التقنية التي تُبقيها تعمل.",
 
     /* Breadcrumb trailing segments */
     "/ About": "/ من نحن",
@@ -79,32 +79,32 @@
     /* HOME — services */
     "02 — What we do": "02 — ماذا نقدّم",
     "Six practices. One dependable system.": "ست ممارسات. نظام واحد موثوق.",
-    "From strategy and infrastructure to development and day-to-day support, TechSys covers the full technology lifecycle — so the pieces are engineered to work together.": "من الاستراتيجية والبنية التحتية إلى التطوير والدعم اليومي، تغطّي تك سيس دورة حياة التقنية كاملة — لتُهندَس الأجزاء كي تعمل معاً.",
-    "We modernise processes, workflows and systems through practical technology adoption — not disruption for its own sake.": "نُحدّث العمليات ومسارات العمل والأنظمة عبر تبنٍّ عمليّ للتقنية — لا اضطراباً لأجل الاضطراب.",
+    "From strategy and infrastructure to development and everyday support, we cover the full technology lifecycle, so every piece is built to work together as one system.": "من الاستراتيجية والبنية التحتية إلى التطوير والدعم اليومي، نغطّي دورة حياة التقنية كاملة، فتُبنى كل قطعة لتعمل مع غيرها كنظامٍ واحد.",
+    "We modernize your processes, workflows and systems through practical technology adoption, not disruption for its own sake.": "نُحدّث عملياتك ومساراتها وأنظمتك عبر تبنٍّ عمليّ للتقنية، لا اضطراباً لأجل الاضطراب.",
     "Faster, leaner operations": "عمليات أسرع وأكثر رشاقة",
-    "Planning, implementation support, integration and customization coordination that keeps your core systems aligned.": "تخطيط ودعم تنفيذ وتكامل وتنسيق تخصيص يُبقي أنظمتك الأساسية متوائمة.",
+    "Planning, implementation, integration and customization, coordinated so your core systems stay aligned.": "تخطيط وتنفيذ وتكامل وتخصيص، مُنسّقة لتبقى أنظمتك الأساسية متوائمة.",
     "Connected operations": "عمليات مترابطة",
-    "Advisory for technology decisions, infrastructure planning, vendor evaluation, security posture and digital strategy.": "استشارات لقرارات التقنية وتخطيط البنية التحتية وتقييم المورّدين والوضع الأمني والاستراتيجية الرقمية.",
+    "Clear, practical advice on technology decisions, infrastructure, vendor evaluation, security and digital strategy.": "نصيحة واضحة وعملية في قرارات التقنية والبنية التحتية وتقييم المورّدين والأمن والاستراتيجية الرقمية.",
     "Confident decisions": "قرارات واثقة",
-    "Reliable managed support, troubleshooting, administration and user support that keeps operations continuous.": "دعم مُدار موثوق واستكشاف للأعطال وإدارة ودعم للمستخدمين يُبقي العمليات مستمرّة.",
+    "Reliable managed support, troubleshooting and administration that keeps your operations running without interruption.": "دعم مُدار موثوق واستكشاف للأعطال وإدارة يُبقي عملياتك تعمل دون انقطاع.",
     "Operational continuity": "استمرارية التشغيل",
-    "Websites, portals, internal tools and mobile applications — custom platforms built around real business needs.": "مواقع وبوابات وأدوات داخلية وتطبيقات جوال — منصّات مخصّصة مبنية حول احتياجات العمل الحقيقية.",
+    "Websites, portals, internal tools and mobile apps, custom platforms built around the way your business actually works.": "مواقع وبوابات وأدوات داخلية وتطبيقات جوال، منصّات مخصّصة مبنية حول طريقة عمل مؤسستك فعلاً.",
     "Purpose-built platforms": "منصّات مبنية لغرضها",
-    "Sourcing the right hardware, software, licenses and infrastructure with technical evaluation and practical advice.": "توريد الأجهزة والبرمجيات والتراخيص والبنية التحتية المناسبة مع تقييم تقني ونصيحة عملية.",
+    "Sourcing the right hardware, software, licenses and infrastructure, backed by technical evaluation and honest advice.": "توريد الأجهزة والبرمجيات والتراخيص والبنية التحتية المناسبة، مدعوماً بتقييم تقني ونصيحة صادقة.",
     "Right tools, right price": "الأدوات المناسبة بالسعر المناسب",
     "See all services in detail": "اطّلع على كل الخدمات بالتفصيل",
 
     /* HOME — approach */
     "03 — How we think": "03 — كيف نفكّر",
     "We understand before we build.": "نفهم قبل أن نبني.",
-    "Understand the operation": "نفهم العملية",
-    "Design the right system": "نصمّم النظام الصحيح",
-    "Build, run & support": "نبني ونشغّل وندعم",
+    "Analyze the operation": "تحليل العملية",
+    "Architect the system": "هندسة النظام",
+    "Deploy and run": "التنفيذ والتشغيل",
 
     /* HOME — clients teaser */
     "04 — Trusted by": "04 — موضع ثقة",
     "Organisations that depend on their systems.": "مؤسسات تعتمد على أنظمتها.",
-    "We partner with enterprises and institutions across sectors. Logos shown are placeholders — ready to be replaced with your client marks.": "نتشارك مع الشركات الكبرى والمؤسسات عبر القطاعات. الشعارات المعروضة مؤقتة — جاهزة لاستبدالها بعلامات عملائك.",
+    "We partner with enterprises and institutions across sectors. The logos below are placeholders, ready to be swapped for your own client marks.": "نتشارك مع الشركات الكبرى والمؤسسات عبر القطاعات. الشعارات أدناه مؤقتة، وجاهزة لاستبدالها بعلامات عملائك.",
     "See clients & project scopes": "اطّلع على العملاء ونطاقات المشاريع",
 
     /* HOME — CTA */
