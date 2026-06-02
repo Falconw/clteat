@@ -109,8 +109,8 @@
 
     /* HOME — CTA */
     "Let's begin": "لنبدأ",
-    "Ready to make your technology clear?": "جاهز لجعل تقنيتك واضحة؟",
-    "Tell us where your systems are today. We'll help you map a practical path to where they need to be — with no obligation.": "أخبرنا أين تقف أنظمتك اليوم. سنساعدك على رسم مسار عملي إلى حيث ينبغي أن تكون — دون أي التزام.",
+    "Your vision deserves systems that can carry it.": "رؤيتك تستحق أنظمةً قادرةً على حملها.",
+    "Share where you want your organization to go, and we'll shape the strategy, systems and support to take you there, built to last.": "شاركنا إلى أين تريد أن تصل بمؤسستك، وسنُعدّ الاستراتيجية والأنظمة والدعم الذي يأخذك إلى هناك، مبنيّاً ليدوم.",
 
     /* Sector tags */
     "Enterprise · Infrastructure": "مؤسسات · بنية تحتية",
