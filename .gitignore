@@ -2,3 +2,26 @@ node_modules/
 test/shots/
 package*.json
 techsys-brand-export/
+
+# AI tooling / generated artifacts — keep local unless explicitly added
+.claude/
+CLAUDE.md
+.cursor/
+.cursorrules
+.aider*
+.github/copilot-instructions.md
+*.skill
+*-export/
+
+# Secrets / private — never commit
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+*.credentials
+secrets.*
+*.secret
