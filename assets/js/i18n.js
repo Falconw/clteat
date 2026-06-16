@@ -46,7 +46,7 @@
     "/ Contact": "/ تواصل معنا",
 
     /* Service names */
-    "Digital Transformation": "التحول الرقمي",
+    "Digital Transformation & Enablement": "التحول الرقمي والتمكين",
     "ERP & IT Solutions": "حلول تخطيط الموارد وتقنية المعلومات",
     "IT Consultations": "الاستشارات التقنية",
     "IT Support": "الدعم التقني",
