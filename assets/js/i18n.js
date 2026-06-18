@@ -36,7 +36,7 @@
     "Saudi Arabia": "العربية السعودية",
     "Riyadh, Kingdom of Saudi Arabia": "الرياض، المملكة العربية السعودية",
     "Engineered Clarity · Riyadh, KSA": "وضوحٌ هندسي · الرياض، السعودية",
-    "Where Dreams Are Born · Saudi Arabia & Middle East": "حيث تُولد الأحلام · السعودية والشرق الأوسط",
+    "Where Dreams Take Shape · Saudi Arabia & Middle East": "حيث تتشكّل الأحلام · السعودية والشرق الأوسط",
     "We partner with organizations to design, build and support the technology that keeps them running.": "نتشارك مع المؤسسات لتصميم وبناء ودعم التقنية التي تُبقيها تعمل.",
 
     /* Breadcrumb trailing segments */
