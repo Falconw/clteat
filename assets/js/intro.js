@@ -32,15 +32,14 @@
       '<span class="ts-intro__sweep"></span>' +
     '</div>';
 
-  function mount() {
-    (document.body || html).appendChild(ov);
-    // next frame → trigger the "play" state (lets initial styles apply first)
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () { ov.classList.add("is-playing"); });
-    });
-  }
-  if (document.body) mount();
-  else document.addEventListener("DOMContentLoaded", mount);
+  // Mount immediately (synchronously in <head>, before first paint) so the overlay
+  // already covers the viewport when the page paints — no flash of page content.
+  // body doesn't exist yet at this point, so fall back to <html>.
+  (document.body || html).appendChild(ov);
+  // next frame → trigger the "play" state (lets initial styles apply first)
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () { ov.classList.add("is-playing"); });
+  });
 
   // Fade out and remove after the sequence completes.
   var DURATION = 2200; // total visible time before fade
