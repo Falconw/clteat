@@ -121,7 +121,7 @@
     "Education · Consulting": "تعليم · استشارات",
 
     /* ABOUT */
-    "A technology partner defined by discipline, taste, and judgment.": "شريك تقني يُميّزه الانضباط والذوق وحُسن التقدير.",
+    "Where technology becomes a strategic advantage.": "حيث تُصبح التقنية ميزة استراتيجية.",
     "Our purpose is not to add more tools, but to make your technology coherent — systems that fit your operation, perform under real-world demands, and remain clear as you grow.": "غايتنا ليست إضافة المزيد من الأدوات، بل جعل تقنيتك متماسكة — أنظمة تناسب عمليّتك، وتؤدّي تحت متطلّبات الواقع، وتبقى واضحة مع نموّك.",
     "TechSys exists to bring clarity to enterprise technology.": "وُجدت تيكسيز لتجلب الوضوح إلى تقنية المؤسسات.",
     "Headquartered in Riyadh, TechSys is a premium IT solutions firm serving enterprises, institutions, and growing businesses across the Kingdom and beyond. We unite technical execution with business judgment across the full technology lifecycle — strategy, infrastructure, development, support, and procurement.": "يقع مقرّ تيكسيز في الرياض، وهي شركة حلول تقنية معلومات متميّزة تخدم الشركات الكبرى والمؤسسات والأعمال النامية في المملكة وخارجها. نجمع بين التنفيذ التقني وحُسن التقدير في العمل عبر دورة حياة التقنية كاملة — استراتيجية وبنية تحتية وتطوير ودعم وتوريد.",
