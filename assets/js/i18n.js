@@ -22,8 +22,7 @@
     "Services": "الخدمات",
     "Clients": "العملاء",
     "Contact": "تواصل معنا",
-    "Start a Consultation": "ابدأ استشارة",
-    "Start a Consultation →": "ابدأ استشارة ←",
+    "How can we help? →": "كيف يمكننا المساعدة؟ ←",
     "Explore Our Services": "استكشف خدماتنا",
     "Explore Services": "استكشف الخدمات",
     "More about TechSys": "المزيد عن تيكسيز",
@@ -64,7 +63,7 @@
 
     /* HOME — message */
     "01 — Who we are": "01 — من نحن",
-    "Technology works best when it's built around the business it serves.": "تعمل التقنية على أفضل نحو حين تُبنى حول العمل الذي تخدمه.",
+    "Technology serves a business best when it's built to fit it.": "تخدم التقنية العمل على أفضل نحو حين تُبنى لتناسبه.",
     "TechSys is a Saudi-based technology partner serving organizations where reliable systems are essential. We partner with enterprises, institutions, and growing businesses to design, implement, and manage technology environments built for structure, continuity, and operational alignment.": "تيكسيز شريك تقني مقرّه السعودية يخدم المؤسسات التي تُعدّ فيها الأنظمة الموثوقة أمراً أساسياً. نتشارك مع الشركات الكبرى والمؤسسات والأعمال النامية لتصميم وتنفيذ وإدارة بيئات تقنية مبنية على البنية والاستمرارية والمواءمة التشغيلية.",
     "We start with the business, not the technology. By understanding how an organization works, we design systems that serve its strategy: dependable infrastructure and platforms, engineered to scale as it grows.": "نبدأ من الأعمال، لا من التقنية. وبفهم طريقة عمل المؤسسة، نصمّم أنظمة تخدم استراتيجيتها: بنية تحتية ومنصّات موثوقة مهندَسة للتوسّع مع نموّها.",
     "Analyze": "تحليل",
@@ -96,9 +95,9 @@
 
     /* HOME — approach */
     "03 — How we think": "03 — كيف نفكّر",
-    "We understand before we build.": "نفهم قبل أن نبني.",
+    "We strategize before we build.": "نضع الاستراتيجية قبل أن نبني.",
     "Analyze the operation": "تحليل العملية",
-    "Architect the system": "هندسة النظام",
+    "Architect the solution": "هندسة الحل",
     "Deploy and run": "التنفيذ والتشغيل",
 
     /* HOME — clients teaser */
@@ -109,8 +108,8 @@
 
     /* HOME — CTA */
     "Let's begin": "لنبدأ",
-    "Your vision deserves systems that can carry it.": "رؤيتك تستحق أنظمةً قادرةً على حملها.",
-    "Share where you want your organization to go, and we'll shape the strategy, systems and support to take you there, built to last.": "شاركنا إلى أين تريد أن تصل بمؤسستك، وسنُعدّ الاستراتيجية والأنظمة والدعم الذي يأخذك إلى هناك، مبنيّاً ليدوم.",
+    "Vision sets the ambition. Technology makes it real.": "الرؤية تحدّد الطموح، والتقنية تحوّله إلى واقع.",
+    "Tell us the goal. We'll build the digital strategy, systems, and support to deliver it, and the reliability to sustain it.": "أخبرنا بالهدف، وسنبني الاستراتيجية الرقمية والأنظمة والدعم لتحقيقه، والموثوقية لإدامته.",
 
     /* Sector tags */
     "Enterprise · Infrastructure": "مؤسسات · بنية تحتية",
