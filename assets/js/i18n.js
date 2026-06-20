@@ -59,7 +59,7 @@
     "TechSys partners with organizations to design, build, and support tailored technology ecosystems that strengthen operations, enable progress, and deliver long-term value.": "تتشارك تيكسيز مع المؤسسات لتصميم وبناء ودعم منظومات تقنية مصمّمة بعناية تُعزّز العمليات، وتُمكّن التقدّم، وتُحقّق قيمة طويلة الأمد.",
     "Saudi-based, enterprise-ready": "مقرّها السعودية، وجاهزة للمؤسسات",
     "Core practices": "ممارسات أساسية",
-    "Analyze → Architect → Deploy → Sustain": "تحليل ← هندسة ← تنفيذ ← استدامة",
+    "Delivery stages — Analyze → Architect → Deploy → Sustain": "مراحل العمل — تحليل ← هندسة ← تنفيذ ← استدامة",
     "Scroll": "مرِّر",
 
     /* HOME — message */
