@@ -565,6 +565,9 @@ html.anim-ready .reveal:not(.is-in) { opacity: 0; transform: translateY(22px); }
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .sysviz { display: none; }
+  /* Hero collapses to one tall column here; the absolutely-positioned scroll
+     cue would overlap the trust row, so retire it on stacked layouts. */
+  .hero__scroll { display: none; }
   .split { grid-template-columns: 1fr; }
   .svc-row { grid-template-columns: 1fr; }
   .svc-row__head { position: static; }
