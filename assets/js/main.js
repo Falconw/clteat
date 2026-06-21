@@ -158,7 +158,7 @@
       const label = btn ? btn.innerHTML : "";
       if (btn) { btn.disabled = true; btn.textContent = T("Sending…"); }
       setTimeout(() => {
-        setStatus("ok", iconCheck() + T("Thank you — your request has reached TechSys. We'll respond within one business day."));
+        setStatus("ok", iconCheck() + T("Thank you — your request has reached TechSys. We'll respond within three business days."));
         form.reset();
         if (btn) { btn.disabled = false; btn.innerHTML = label; }
       }, 700);

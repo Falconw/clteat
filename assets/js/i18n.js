@@ -34,6 +34,9 @@
     "Riyadh, Kingdom of": "الرياض، المملكة",
     "Saudi Arabia": "العربية السعودية",
     "Riyadh, Kingdom of Saudi Arabia": "الرياض، المملكة العربية السعودية",
+    "Kingdom of Saudi Arabia": "المملكة العربية السعودية",
+    "Kingdom of": "المملكة",
+    "TechSys office — Spaces at Ajdan Walk, Al Khobar, KSA": "مكتب تيكسيز — سبيسز في أجدان ووك، الخبر، السعودية",
     "Engineered Clarity · Riyadh, KSA": "وضوحٌ هندسي · الرياض، السعودية",
     "Where Dreams Take Shape · Saudi Arabia & Middle East": "حيث تتشكّل الأحلام · السعودية والشرق الأوسط",
     "We partner with organizations to design, build and support the technology that keeps them running.": "نتشارك مع المؤسسات لتصميم وبناء ودعم التقنية التي تُبقيها تعمل.",
@@ -295,12 +298,12 @@
 
     /* CONTACT */
     "Let us start with a conversation.": "لنبدأ بمحادثة.",
-    "Tell us where your systems stand today and what is getting in the way. We will respond within one business day — no pressure, no obligation.": "أخبرنا أين تقف أنظمتك اليوم وما الذي يعترض الطريق. سنردّ خلال يوم عمل واحد — دون ضغط ودون التزام.",
+    "Tell us where your systems stand today and what is getting in the way. We will respond within three business days — no pressure, no obligation.": "أخبرنا أين تقف أنظمتك اليوم وما الذي يعترض الطريق. سنردّ خلال ثلاثة أيام عمل — دون ضغط ودون التزام.",
     "Get in touch": "تواصل معنا",
     "Direct lines to the team.": "خطوط مباشرة مع الفريق.",
     "Prefer to reach out directly? Use the details below, or submit the form and we will route your request to the right practice.": "تفضّل التواصل المباشر؟ استخدم التفاصيل أدناه، أو أرسل النموذج وسنوجّه طلبك إلى الممارسة المناسبة.",
     "Response time": "زمن الاستجابة",
-    "Within one business day": "خلال يوم عمل واحد",
+    "Within three business days": "خلال ثلاثة أيام عمل",
     "Map placeholder · Riyadh, KSA": "موضع الخريطة · الرياض، السعودية",
     "Full name": "الاسم الكامل",
     "Service of interest": "الخدمة المهتمّ بها",
@@ -316,7 +319,7 @@
     "Open menu": "فتح القائمة",
 
     /* Dynamic (JS) form messages */
-    "Thank you — your request has reached TechSys. We'll respond within one business day.": "شكراً لك — وصل طلبك إلى تيكسيز. سنردّ خلال يوم عمل واحد.",
+    "Thank you — your request has reached TechSys. We'll respond within three business days.": "شكراً لك — وصل طلبك إلى تيكسيز. سنردّ خلال ثلاثة أيام عمل.",
     "Please review the highlighted fields and try again.": "يرجى مراجعة الحقول المميّزة والمحاولة مرة أخرى.",
     "Please enter your full name.": "يرجى إدخال اسمك الكامل.",
     "Please enter your company name.": "يرجى إدخال اسم شركتك.",
