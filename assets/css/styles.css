@@ -141,7 +141,7 @@ strong { font-weight: 700; }
 .kicker--plain::before { display: none; }
 
 /* 4. LAYOUT ------------------------------------------------ */
-.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 3rem); }
+.container { width: 100%; max-width: none; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 3rem); }
 .container--narrow { max-width: var(--container-narrow); }
 .section { padding-block: var(--section-y); position: relative; }
 .section--tight { padding-block: clamp(3.5rem, 2rem + 6vw, 6rem); }
@@ -731,17 +731,6 @@ html.ts-intro-lock, html.ts-intro-lock body { overflow: hidden; height: 100%; }
   transition: width .8s var(--ease) .35s;
 }
 .ts-intro.is-playing .ts-intro__sweep { width: min(70%, 280px); }
-
-/* Flight: the wordmark detaches and arcs to the nav corner (WAAPI in intro.js).
-   The dark backdrop fades away so only the mark is seen travelling. */
-.ts-intro__mark { will-change: transform; }
-.ts-intro.is-flying { background: transparent; transition: background-color .45s var(--ease); }
-.ts-intro.is-flying::before { opacity: 0; }
-.ts-intro.is-flying .ts-intro__tagline,
-.ts-intro.is-flying .ts-intro__sweep { opacity: 0; transition: opacity .3s var(--ease); }
-
-/* Hide the real nav logo until the flight lands on it (avoids a duplicate). */
-html.ts-intro-busy .nav .brand { opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   .ts-intro { display: none; }
