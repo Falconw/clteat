@@ -153,15 +153,27 @@
         firstErr && firstErr.focus();
         return;
       }
-      // Phase 2: POST to a backend / Formspree / API route here.
-      const btn = form.querySelector("[type=submit]");
-      const label = btn ? btn.innerHTML : "";
-      if (btn) { btn.disabled = true; btn.textContent = T("Sending…"); }
-      setTimeout(() => {
-        setStatus("ok", iconCheck() + T("Thank you — your request has reached TechSys. We'll respond within three business days."));
-        form.reset();
-        if (btn) { btn.disabled = false; btn.innerHTML = label; }
-      }, 700);
+      // No backend: hand the enquiry to WhatsApp so it lands in a chat we monitor.
+      const WA_NUMBER = "966580852664";
+      const fd = new FormData(form);
+      const val = (k) => (fd.get(k) || "").toString().trim();
+      const text = [
+        "New enquiry from the TechSys website",
+        "",
+        "Name: " + val("name"),
+        "Company: " + val("company"),
+        "Email: " + val("email"),
+        "Phone: " + (val("phone") || "—"),
+        "Service: " + val("service"),
+        "Message: " + val("message"),
+      ].join("\n");
+      const waURL = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+      const win = window.open(waURL, "_blank");
+      if (!win) location.href = waURL;
+      setStatus("ok", iconCheck() + T("Opening WhatsApp so you can send your enquiry — just tap send.") +
+        ' <a href="' + waURL + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">' +
+        T("Open WhatsApp") + "</a>");
+      form.reset();
     });
 
     function iconCheck() { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="18" height="18"><path d="M20 6 9 17l-5-5"/></svg>'; }
