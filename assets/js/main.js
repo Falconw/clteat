@@ -43,6 +43,20 @@
       }, { passive: true });
       nav.addEventListener("touchend", () => { swipeY = null; }, { passive: true });
     }
+
+    /* --- Animated wordmark: swap static SVG -> APNG once loaded ----
+       The nav <img>s render the crisp static SVG first (instant, no
+       layout shift). Each carries a `data-anim` APNG; we preload it and
+       swap `src` only after it loads, so a failed/blocked APNG silently
+       leaves the SVG in place. Skipped for reduced-motion users. */
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      nav.querySelectorAll(".brand .wordmark__img[data-anim]").forEach((img) => {
+        const next = img.getAttribute("data-anim");
+        const pre = new Image();
+        pre.addEventListener("load", () => { img.src = next; });
+        pre.src = next;
+      });
+    }
   }
 
   /* --- Reveal on scroll (IntersectionObserver) -------------- */
@@ -139,15 +153,27 @@
         firstErr && firstErr.focus();
         return;
       }
-      // Phase 2: POST to a backend / Formspree / API route here.
-      const btn = form.querySelector("[type=submit]");
-      const label = btn ? btn.innerHTML : "";
-      if (btn) { btn.disabled = true; btn.textContent = T("Sending…"); }
-      setTimeout(() => {
-        setStatus("ok", iconCheck() + T("Thank you — your request has reached TechSys. We'll respond within one business day."));
-        form.reset();
-        if (btn) { btn.disabled = false; btn.innerHTML = label; }
-      }, 700);
+      // No backend: hand the enquiry to WhatsApp so it lands in a chat we monitor.
+      const WA_NUMBER = "966580852664";
+      const fd = new FormData(form);
+      const val = (k) => (fd.get(k) || "").toString().trim();
+      const text = [
+        "New enquiry from the TechSys website",
+        "",
+        "Name: " + val("name"),
+        "Company: " + val("company"),
+        "Email: " + val("email"),
+        "Phone: " + (val("phone") || "—"),
+        "Service: " + val("service"),
+        "Message: " + val("message"),
+      ].join("\n");
+      const waURL = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+      const win = window.open(waURL, "_blank");
+      if (!win) location.href = waURL;
+      setStatus("ok", iconCheck() + T("Opening WhatsApp so you can send your enquiry — just tap send.") +
+        ' <a href="' + waURL + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">' +
+        T("Open WhatsApp") + "</a>");
+      form.reset();
     });
 
     function iconCheck() { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="18" height="18"><path d="M20 6 9 17l-5-5"/></svg>'; }
